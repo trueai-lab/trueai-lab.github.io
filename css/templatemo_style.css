@@ -1,0 +1,1277 @@
+@charset "UTF-8";/*!
+ * BootstrapVue Custom CSS (https://bootstrap-vue.js.org)
+ */
+@media (max-width: 575.98px) {
+    .bv-d-xs-down-none {
+        display:none!important
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bv-d-sm-down-none {
+        display:none!important
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bv-d-md-down-none {
+        display:none!important
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .bv-d-lg-down-none {
+        display:none!important
+    }
+}
+
+
+/* 1. CSS resets
+--------------------------------------*/
+p {	margin: 0; }
+ul { padding: 90; }
+li { list-style: none; }
+a { text-decoration: none; }
+
+/*  2. Universal styles
+--------------------------------------*/
+
+/** {font-family: 'Montserrat', sans-serif;}*/
+html { height: 100%;}
+body { background-color: #ffffff; height: 100%;}
+
+h1 {
+	font-size: 24px;
+	line-height: 1.5;
+	text-shadow: 1px 1px 1px rgba(44, 106, 101, 0.5);
+	margin: 0 0 10px 0;
+}
+
+h2, footer i { font-size: 18px; font-family: 'Helvetica Neue'}
+
+h3 {
+    font-size: 15px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px rgba(167, 221, 255, 0.5);
+    margin: 0 0 10px 0;
+}
+
+h4 {
+    font-size: 15px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px rgba(167, 221, 255, 0.5);
+    margin: 0 0 10px 0;
+}
+
+
+h1, h2, h3 { font-weight: 300; }
+
+p, form, ul { font-size: 18px; }
+
+address {	font-size: 14px; }
+
+p { line-height: 1.8em; font-family: 'Helvetica'}
+/*i {	color: #909090; }*/
+
+footer {
+	margin-top: 20px;
+	padding: 0px 35% 0px 35%;
+}
+footer p {
+    font-size: 14px;
+	float: left;
+	margin-top: 6px;
+	color: #909090;
+}
+footer i {
+	display: inline-block;
+	padding: 5px;
+}
+footer i:hover, footer i:active { color: #A7DDFF; }
+
+.bottomlab-img {
+    width: 120px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 480px) {
+footer p {
+    font-size: 8px;
+}
+.bottomlab-img {
+    width: 60px;
+}
+}
+
+img.shadow { box-shadow: 5px 10px 10px -5px rgba(0,0,0,0.5); }
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+p.justify { text-align: justify; }
+.templatemo-detail img {
+	max-width: 250px;
+	width: 100%;
+	height: auto;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+.fa { margin: 6px; }
+.left { float: left; }
+.right { float: right; }
+.center-text { text-align: center; }
+
+hr.gradient{
+    height: 1px;
+    max-width: 1000px;
+    background: #bbb;
+    background-image: -webkit-linear-gradient(left, #eee, #777, #eee);
+    background-image: -moz-linear-gradient(left, #eee, #777, #eee);
+    background-image: -ms-linear-gradient(left, #eee, #777, #eee);
+    background-image: -o-linear-gradient(left, #eee, #777, #eee);
+}
+
+hr.dark {
+    background: #B2B0A8;
+    color: #B2B0A8;
+    border: none;
+    height: 1px;
+    margin: 5px;
+    padding: 0;
+}
+
+hr.normal {
+    height: 1px;
+    margin: 1px;
+}
+/* news styles */
+.newsitem {
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    background: #f1f7fd;
+    padding: 10px;
+    line-height: 17px;
+    overflow: hidden;
+}
+
+.newstag {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    margin: -11px -11px 0px -11px;
+    padding: 1px 10px 1px 10px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    background-color: #00549F;
+}
+
+.newstext {
+    text-align: center;
+    display: inline;
+    font-size: 16px;
+}
+
+.newshead {
+	display: inline;
+	color: red;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-style:italic;
+	font-size: 18px;
+	font-family: TimesNewRoman;
+}
+
+#tittle-wrapper h1 {
+    /*border-top: 1px solid #EF4123;*/
+    border-bottom: 1px solid #00549F;
+    padding: 5px 0px 5px 5px;
+    /*background: #fcfbf7;*/
+    margin: 0;
+}
+
+#tittle-wrapper h3 {
+    /*border-top: 1px solid #EF4123;*/
+    border-bottom: 0.5px solid #00549F;
+    line-height: 1.5;
+    width: 8.5%;
+    padding: 5px 0px 5px 5px;
+    /*background: #fcfbf7;*/
+    margin: 0;
+}
+
+#tittle-wrapper h4 {
+    /*border-top: 1px solid #EF4123;*/
+    border-bottom: 0.5px solid #00549F;
+    line-height: 1.5;
+    width: 14%;
+    padding: 5px 0px 5px 5px;
+    /*background: #fcfbf7;*/
+    margin: 0;
+}
+
+/*  3. Navigation styles
+--------------------------------------*/
+/* Menu - logo */
+.logo {
+    font-size: 28px;
+    /*margin: 2% 0% 5% 14%;*/
+    display: inline-block;
+    /*width: 8%;*/
+    max-height: 8%;
+    /*width: 14%;*/
+    float: left;
+}
+
+.logo img {
+    text-align: left;
+    display: inline-block;
+    height: inherit;
+    width: inherit;
+}
+
+#logo{
+    width:58px;
+    height:auto;
+    margin: 5px 8px 5px 18px;
+}
+
+#lablogo{
+    width:118px;
+    height:auto;
+    /* Center vertically against the taller university crest box (5px + 61px + 5px = 71px). */
+    margin: 11px 0px;
+}
+
+.logofont {
+    font-size: 28px;
+    display: inline-block;
+    width: 200px;
+    float: left;
+    color: white;
+    margin: 10px 0% 0% 0%;
+}
+
+.cvlab {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 500 !important;
+}
+.cvlab strong {
+    font-weight: 800 !important;
+}
+
+.navbar-toggle, .navbar-default .navbar-toggle:hover {
+  border: none;
+  background-color:#FFF
+}
+
+/* Menu - background */
+.menu-bg {
+    z-index: 10;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: auto;
+    width: 100%;
+    border-width: 1px 0;
+    background: #0066B3;
+}
+
+.wrappernav {
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Menu */
+.menu {
+    width: 100%;
+    margin: 12px 32%;
+    display: block;
+    list-style: none;
+    /*text-align: center;*/
+}
+
+@media only screen and (max-width: 1800px) {.menu {margin: 12px 31%; }}
+@media only screen and (max-width: 1700px) {.menu {margin: 12px 30%; }}
+@media only screen and (max-width: 1600px) {.menu {margin: 12px 29%; }}
+@media only screen and (max-width: 1500px) {.menu {margin: 12px 28%; }}
+@media only screen and (max-width: 1400px) {.menu {margin: 12px 27%; }}
+@media only screen and (max-width: 1300px) {.menu {margin: 12px 26%; }}
+@media only screen and (max-width: 1200px) {.menu {margin: 12px 25%; }}
+@media only screen and (max-width: 1100px) {.menu {margin: 12px 24%; }}
+@media only screen and (max-width: 1000px) {.menu {margin: 12px 23%; }}
+@media only screen and (max-width: 900px) {.menu {margin: 12px 22%; }}
+@media only screen and (max-width: 800px) {.menu {margin: 12px 21%; }}
+@media only screen and (max-width: 700px) {.menu {margin: 12px 20%; }}
+@media only screen and (max-width: 600px) {.menu {margin: 12px 18%; }}
+@media only screen and (max-width: 500px) {.menu {margin: 12px 14%; }}
+@media only screen and (max-width: 400px) {.menu {margin: 12px 10%; }}
+
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.menu > li {
+    display: inline-block;
+}
+
+/* Menu - menu icon on mobile and touch device */
+.menu-small {
+    display: none;
+    height: auto;
+    width: 32px;
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    z-index: 10;
+    color: #414141;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.main-container {
+    height: auto;
+	margin: 0 auto;
+	background: white;
+	/*box-shadow: 0 0 5px rgba(107, 110, 112, 0.4);*/
+}
+
+.content-container {
+	box-sizing: border-box;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px;
+	overflow: hidden;
+}
+.content { padding-top: 15px; }
+
+.title{ /* TRANG's Lab */
+    background: #fcfbfa;
+    text-align: center;
+    padding-top: 1vw;
+    padding-right: 3vw;
+    font-weight: 300;
+    font-size: 2.5vw;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+/*  4. Slidshow of photos 
+--------------------------------------*/
+/** {box-sizing: border-box;}*/
+/* Hide the images by default */
+.slides {
+    display: none;
+    height: auto;
+}
+
+.header_slides {
+    display: none;
+    width:100%; 
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    z-index: 0;
+}
+
+
+#header_1{
+    background-image: url('../asset/images/homepage/banner1.svg') !important;
+}
+
+#header_2{
+    background-image: url('../asset/images/homepage/banner2.svg') !important;
+}
+
+#header_3{
+    background-image: url('../asset/images/homepage/banner3.svg') !important;
+}
+
+#header_4{
+    background-image: url('../asset/images/homepage/banner4.svg') !important;
+}
+
+@keyframes fade-out {
+  0% {opacity: 0.25;}
+  25%{opacity: 1;}
+  50%{opacity: 1;}
+  75%{opacity: 1;}
+  100% {opacity: 0.25;}
+}
+
+/* head container */
+#headimg-container {
+    width: 100%;
+    /*width: 1903px;*/
+    height: 600px;
+    position: relative;
+    margin: auto;
+    animation: fade-out 5.015s infinite;
+}
+
+#headimg-container img {
+    width:100%; 
+    height: 800px;
+    background-attachment: fixed;
+}
+
+/* Slideshow container */
+#slideshow-container {
+    width: 560px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 0px 20px;
+    float: right;
+}
+
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /*magic*/
+}
+
+@media only screen and (max-width: 480px) {
+#slideshow-container {
+    width: 200px;
+    height: auto;
+}
+}
+
+#slideshow-container img {
+    width:100%; 
+    height: 400px;
+}
+
+/* Caption text */
+.captiontext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: #002B54;
+    opacity: 0.5;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.bannertext {
+    color: #f2f2f2;
+    position: relative;
+    top: 300px;
+    text-align: center;
+    float: center;
+    z-index: 1;
+}
+
+.bannerfont {
+    font-size: 48px;
+    color: white;
+    margin: 10px 0% 0% 0%;
+    /*text-shadow: 3px 3px #333333;*/
+}
+
+@media only screen and (max-width: 480px) {
+.bannerfont {
+    font-size: 24px;
+    color: white;
+    margin: 10px 0% 0% 0%;
+    /*text-shadow: 3px 3px #333333;*/
+}
+
+/* head container */
+#headimg-container {
+    width: 100%;
+    height: 600px;
+    animation: fade-out 5.015s infinite;
+}
+
+/* Slideshow container */
+#slideshow-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 0px 20px;
+    float: right;
+}
+    }
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.5) 100%);
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.5) 100%);
+    background-image: linear-gradient(to right, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.5) 100%);
+    background-repeat: repeat-x;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a background color with a little bit see-through */
+.prev:hover, .next:hover {
+    /*background-color: #ffffff;*/
+}
+
+
+/* The dots/bullets/indicators */
+.indicators {
+    text-align:center;
+    margin: 20px;
+    /*text-align: right;*/
+/*    position: absolute;
+    top: 800px;
+    left: 600px;
+    float: right;
+*/}
+
+.header_indicators {
+    text-align:center;
+    position: absolute;
+    top: 580px;
+    right: 1%;
+    float: right;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.header_dot {
+    height: 3px;
+    width: 30px;
+    margin: 0 2px;
+    background-color: #bbb;
+    /*border-radius: 50%;*/
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #002B54;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {left:0;} 
+    to {left:-100%;}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+.limit-items .items .newsitem:nth-of-type(n+6){
+    display: none
+}
+.limit-items #show-all:checked~.items .newsitem{
+    display: block
+}
+
+.limit-items #show-all~label[for=show-all]{
+    display: none
+}
+.limit-items #show-all:checked~.text-hide{
+    display: inline-block;
+    padding: .5%;
+}
+.limit-items #show-all:not(:checked)~.text-show{
+    display: inline-block;
+    padding: .5%
+}
+.limit-items{
+    display: block;
+    position: relative;
+    padding-bottom: 2.5em
+}
+.limit-items #show-all{
+    display: none
+}
+
+.limit-items label[for=show-all]{
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    /*margin-left: 10%;*/
+    margin-left: 43%;
+    font-size: 12px;
+    cursor: pointer;
+    color: #a0a0a0;
+    font-weight: 700;
+    line-height: 1rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 480px) {
+.limit-items label[for=show-all]{
+    margin-left: 30%;
+}
+}
+
+.limit-items label[for=show-all]:hover{
+    border: solid;
+    border-width: 1px
+}
+.limit-items label[for=show-all]:active{
+    border: 1px solid #222;
+    background-color: #222;
+    color:#fff
+}
+
+#uparrow:before {
+    content: '\276F';
+}
+
+#downarrow:before {
+    content: '\276E';
+}
+
+#uparrow, #downarrow {
+    font-size: 12px;
+    display: inline-block;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    padding: 10px;
+}
+
+/*  5. People styles
+--------------------------------------*/
+.facimg {
+    width: 158px;
+    border-radius: 10px;
+    float: center;
+    margin-right: 15px;
+}
+
+.faculty {
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 220px;
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.faculty img {
+    width: 150px;
+    height: 200px;
+    box-shadow: 0 0 7px 0px #AAA;
+    margin-bottom: 8px;
+}
+
+.member {
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 220px;
+    display: inline-block;
+    margin: 10px 0px 0px 10px;
+    vertical-align: top;
+}
+
+.mail {
+    font-size: 12px;
+}
+
+.member img {
+    height: 180px;
+    /*border-radius: 100px;*/
+    /*border: 3px solid #FFF;*/
+    box-shadow: 0 0 7px 0px #AAA;
+    margin-bottom: 8px;
+    margin-right: 8px;
+
+}
+
+.btags2 {
+    color: #0072BC;
+    background-color: #DFD;
+    border: 1px solid #CEC;
+    display: inline-block;
+    padding: 2px 5px 2px 5px;
+    margin-top: 3px;
+}
+
+.member > .btags2 ~ .btags2 {
+    margin-top: 1px;
+}
+
+.btw {
+    width: 100%;
+    text-align: center;
+}
+
+.alumni {
+    color: #555;
+    font-size: 12px;
+    /*padding-bottom: 10px;*/
+    width: 250px;
+    display: inline-block;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.alumni img {
+	float: left;
+    height: 80px;
+    margin: 5px;
+}
+
+
+/*  6. Research styles
+--------------------------------------*/
+.collapsible {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible.active:after {
+    content: '\2212';
+    color: #fff;
+}
+.collapsible:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active, .collapsible:hover {
+    background-color: #00549F;
+    color: #fff;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.service-block {
+    margin-bottom: 25px;
+}
+
+.media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.pl-1, .px-1 {
+    padding-left: 0.25rem!important;
+}
+.pr-1, .px-1 {
+    padding-right: 0.25rem!important;
+}
+.media-body {
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.service-img {
+    border: 10px solid#fff;
+    z-index: 9999;
+    max-width: 150px;
+}
+.border {
+    border: 1px solid #dee2e6!important;
+}
+
+.service-inner-content > p {
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.service-inner-content > h3 {
+    font-size: 1.375rem;
+}
+
+.service-inner-content > h1, h2, h3, h4, h5, h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+/*    color: #fff;*/
+}
+
+/*  7. Paper styles
+--------------------------------------*/
+.year_link{
+	font-size: 16px;
+	margin: 5px;
+}
+
+.quick_link{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	/*border-bottom: solid 1px #EEE;*/
+    border-bottom: 1px solid #002B54;
+}
+
+h2.year{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+tr{
+    display: block;
+    border-bottom: solid 1px #EEE;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+/*.paper {
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+*/
+.pimg {
+    float: left;
+    width: 125px;
+    max-height: 100px;
+    margin: 10px;
+}
+
+.ptitle {
+    padding: 1px;
+    margin: 1px;
+    font-weight: bold;
+}
+
+.pauthors {
+    padding: 1px;
+    margin: 1px;
+    font-style: italic;
+}
+
+.pvenue {
+    display: inline-block;
+    /*color: #0072BC;*/
+    margin: 1px;
+    margin-right: 20px;
+}
+
+.plinks {
+    display: inline-block;
+}
+
+pre{display:block;
+    padding:9.5px;
+    margin:0 0 10px;
+    font-size:13px;
+    line-height:1.428571429;
+    color:#333;
+    word-break:break-all;
+    word-wrap:break-word;
+    background-color:#f1f7fd;;
+    border:1px solid #ccc;
+    border-radius:4px}
+
+/* BibTeX box with top-right copy button. */
+pre.bibtex-box{
+    position:relative;
+    background-color:#1f4844;
+    border:none;
+    border-radius:12px;
+    padding:22px 24px;
+    box-shadow:0 8px 26px rgba(0,0,0,0.14);
+    overflow-x:auto;
+    word-break:normal;
+    word-wrap:normal;
+    color:#E6F0F9;
+}
+pre.bibtex-box code{
+    background:transparent;
+    color:#E6F0F9;
+    font-family:'Fira Code',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:0.95em;
+    line-height:1.65;
+    white-space:pre;
+}
+.copy-btn{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:36px;
+    height:36px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,0.10);
+    color:#E6F0F9;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:background 0.2s ease;
+}
+.copy-btn:hover{background:rgba(255,255,255,0.22);}
+.copied-msg{
+    position:absolute;
+    top:20px;
+    right:56px;
+    color:#7fe0b0;
+    font-size:0.85em;
+}
+#extreme{ 
+    display:none!important; 
+}
+
+/*  8. Teaching styles
+--------------------------------------*/
+
+table.course{
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin:auto;
+    font-family: sans-serif;
+}
+table.course td.time{
+    font-size: 18px;
+	height: 24px;
+    width: 200px;
+    text-align: right;
+    padding-right: 60px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+}
+
+table.course td.title{
+    font-weight: 300;
+    font-size: 18px;
+	height: 24px;
+    width: 600px;
+    text-align: left;
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+div.teacher{
+	display: inline;
+    font-size: 18px;
+	margin-right: 20px;
+    font-family: sans-serif;
+}
+
+div.teachingassit{
+    display: inline;
+    font-size: 18px;
+    margin-right: 20px;
+    font-family: sans-serif;
+}
+/* ---------------------------------------------------------------------- */
+/*  Links */
+/* ---------------------------------------------------------------------- */
+/* Links - basic style */
+/* Brand-aligned teal hyperlinks (match navbar / Openings card).
+   Note: Bootstrap 3 ships a strong `a { color: #428BCA }` rule that often
+   wins the cascade; we use a higher-specificity selector to override. */
+a, a:link, a:visited {
+  margin: 0;
+  text-decoration: none;
+  color: #0066B3 !important;
+  -webkit-transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+  -moz-transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+a:hover, a:focus {
+  color: #003E78 !important;
+  text-decoration: underline;
+}
+/* Preserve white text on the dark teal navbar (otherwise links go invisible). */
+.menu a, .menu a:link, .menu a:visited,
+.menu a:hover, .menu a:focus {
+  color: #ffffff !important;
+}
+/* Preserve teal-on-white look for the Openings scholarship chips. */
+.opening-chip, .opening-chip:link, .opening-chip:visited { color: #0066B3 !important; }
+.opening-chip:hover, .opening-chip:focus { color: #ffffff !important; }
+
+/* Change color to turquoise => gray */
+.link-turquoise {
+  display: inline-block;
+  color: #0072BC;
+}
+.link-turquoise:hover,
+.link-turquoise:focus {
+  color: #414141;
+}
+
+/* Change link to button on :hover */
+.link-to-button {
+  padding: 0 22px;
+  display: block;
+  height: 37px;
+  font-size: 110%;
+  line-height: 200%;
+}
+
+@media only screen and (max-width: 1800px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1700px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1600px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1500px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1400px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1300px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1200px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1100px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 1000px) {.link-to-button {padding: 0 22px;}}
+@media only screen and (max-width: 900px) {.link-to-button {padding: 0 18px;}}
+@media only screen and (max-width: 800px) {.link-to-button {padding: 0 14px;}}
+@media only screen and (max-width: 700px) {.link-to-button {padding: 0 10px;}}
+@media only screen and (max-width: 600px) {.link-to-button {padding: 0 8px;}}
+@media only screen and (max-width: 500px) {.link-to-button {padding: 0 6px;}}
+@media only screen and (max-width: 400px) {.link-to-button {padding: 0 4px;}}
+
+.link-to-button:hover,
+.link-to-button:focus,
+.active > .link-to-button {
+  /*background: #0072BC;*/
+  color: white !important;
+  /*text-decoration: none;*/
+}
+
+.link {
+  margin-top: 0;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #323232;
+}
+
+.link:focus, .link:hover
+.link:focus .icomoon-link,
+.link:hover .icomoon-link{
+  color: #0072BC;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*  Image */
+/* ---------------------------------------------------------------------- */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.image {
+  display: block;
+  height: 30%;
+  width: 65%;
+  float: right;
+}
+
+/* Image container */
+.img-container {
+  padding-bottom: 34%;
+  display: block;
+  width: 50%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #fefefe;
+  text-align: center; 
+  float: right;
+}
+
+.img-container img {
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto auto;
+  top: 50%; left: 50%; 
+  transform: translate(-50%,-50%)
+}
+/* ====================================================================== */
+/* Site footer (two-column with Connect chips). Replaces legacy        */
+/* .footer-social / .bottomlab-img layout.                              */
+/* ====================================================================== */
+.site-footer {
+	padding: 32px 36px 18px;
+	color: #444;
+	font-size: 14px;
+}
+.site-footer-cols {
+	display: flex;
+	gap: 40px;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.site-footer-left {
+	display: flex;
+	align-items: center;
+	gap: 0;
+	flex: 1 1 auto;
+	min-width: 280px;
+}
+/* University crest to the left of the TRANG's Lab logo in the footer.
+   Both footer logos are a touch smaller than the navbar ones. */
+.site-footer-univ {
+	height: 52px;
+	width: auto;
+	flex: 0 0 auto;
+	margin-right: 12px;
+}
+.site-footer-logo {
+	height: 36px;
+	width: auto;
+	flex: 0 0 auto;
+	padding-right: 20px;
+	border-right: 1px solid #dcdcd8;
+}
+.site-footer-affil {
+	line-height: 1.5;
+	font-size: 14px;
+	padding-left: 22px;
+}
+.site-footer-affil > div { padding: 1px 0; }
+.site-footer-affil .lab-name { font-weight: 700; color: #003E78; font-size: 16px; }
+.site-footer-affil .addr { color: #888; font-size: 13px; }
+.site-footer-affil a, .site-footer-affil a:link, .site-footer-affil a:visited {
+	color: #0066B3 !important;
+	text-decoration: none !important;
+}
+.site-footer-affil a:hover, .site-footer-affil a:focus {
+	color: #003E78 !important;
+	text-decoration: underline !important;
+}
+.site-footer-right {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 10px;
+	flex: 0 0 auto;
+}
+.site-footer-connect-label {
+	font-size: 12px;
+	font-weight: 700;
+	color: #003E78;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+/* Clean icon-only socials, k-han.org style: evenly-spaced fixed-width icons
+   with dot separators. Fixed icon width + uniform gap keeps icon centers
+   equidistant despite the glyphs having different intrinsic widths. */
+.site-footer-socials {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 22px;
+	line-height: 1;
+}
+.site-footer-socials > a,
+.site-footer-socials a:hover, .site-footer-socials a:focus {
+	color: #003E78 !important;
+	text-decoration: none !important;
+}
+/* Dot separators between social icons. */
+.site-footer-socials .sep {
+	color: rgba(0, 108, 101, 0.6);
+	font-size: 22px;
+	line-height: 1;
+	margin-top: -3px;
+	user-select: none;
+	pointer-events: none;
+}
+.site-footer-socials .ai, .site-footer-socials .fa {
+	font-size: 1em;
+}
+.site-footer-socials .x-mark {
+	font-weight: 700;
+	font-family: 'Times New Roman', serif;
+	font-size: 0.95em;
+	line-height: 1;
+}
+.site-footer-bottom {
+	margin-top: 20px;
+	padding-top: 12px;
+	border-top: 1px solid #eaeae6;
+	font-size: 12px;
+	color: #888;
+	text-align: center;
+}
+.site-footer-bottom p { margin: 0; font-size: 12px; }
+@media (max-width: 700px) {
+	.site-footer { padding: 24px 18px 14px; }
+	.site-footer-cols { flex-direction: column; align-items: flex-start; gap: 18px; }
+	.site-footer-right { align-items: flex-start; }
+	.site-footer-socials { justify-content: flex-start; }
+}
+
+/* Contact page: OpenStreetMap embed replaces the old static campus image. */
+.map-embed {
+	height: 380px;
+	border: 1px solid #d8dde3;
+	border-radius: 6px;
+}
+@media only screen and (max-width: 768px) {
+	.map-embed { width: 100%; float: none; height: 300px; margin-bottom: 20px; }
+}

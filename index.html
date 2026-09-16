@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script>
+		var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+    </script>
+	<title>TRANG's Lab</title>
+	<meta name="keywords" content="TRANG's Lab, HCMUT, Bach Khoa, artificial intelligence, machine learning, computer vision, generalization, foundation models, generative AI, Vietnam" />
+	<meta name="description" content="TRANG's Lab - Transformative Research in Artificial Intelligence & Generalization. AI research group at the Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT)." />
+	<Meta name="Robots" Content="Follow">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#00549F">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#00549F">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#00549F">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+	<link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/templatemo_style.css?v=20260531f" rel="stylesheet" type="text/css">
+	<style>
+		/* The popup itself: absolutely positioned near the trigger; hidden by default. */
+
+		/* Hover delay: only show after the user hovers briefly (similar UX to tooltips). */
+
+		/* QR image sizing inside tooltip */
+
+		/* Optional caption style */
+
+		/* Footer placement: show the QR popup above the icon (footer sits near the bottom of the viewport). */
+
+		/* Mobile UX: center the popup in the viewport (not relative to the icon), and enlarge caption text. */
+		@media (max-width: 768px) {
+
+
+
+		}
+
+		/* Research areas row: small chip-style tags placed below the About paragraph
+		   to balance the empty left-column space next to the right-floated slideshow. */
+		.research-areas {
+			margin: 14px 0 4px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px 8px;
+			align-items: center;
+			font-size: 0.95em;
+		}
+		.research-areas-label {
+			color: #0066B3;
+			font-weight: 700;
+			letter-spacing: 0.02em;
+			margin-right: 2px;
+		}
+		.research-chip {
+			display: inline-block;
+			padding: 3px 11px;
+			background: #ffffff;
+			border: 1px solid rgba(0, 108, 101, 0.30);
+			border-radius: 999px;
+			font-size: 0.88em;
+			font-weight: 500;
+			color: #003E78;
+			line-height: 1.5;
+		}
+
+		/* Bring the right-floated slideshow up a touch so it visually balances
+		   the About paragraph (and reduces the empty area below it). */
+		#slideshow-container {
+			margin-top: -18px !important;
+		}
+
+		/* Openings card: a soft, branded container highlighting recruiting items. */
+		.openings {
+			/* Make sure the card starts on its own row, below the right-floated slideshow,
+			   so it never overlaps. Negative-top margin keeps the gap tight. */
+			clear: both;
+			margin: 6px 0 28px;
+			padding: 20px 24px 18px;
+			background: linear-gradient(135deg, #F2F7FC 0%, #E6F0F9 100%);
+			border: 1px solid rgba(0, 108, 101, 0.18);
+			border-left: 5px solid #0066B3;
+			border-radius: 10px;
+			box-shadow: 0 4px 14px rgba(0, 108, 101, 0.08);
+		}
+		.openings-title {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 1.45em;
+			font-weight: 700;
+			color: #003E78;
+			margin: 0 0 12px;
+			letter-spacing: 0.02em;
+		}
+		.openings-title::before {
+			content: "\1F6A9"; /* flag emoji */
+			font-size: 1.1em;
+		}
+		.openings-list {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 10px;
+		}
+		.openings-list > li {
+			position: relative;
+			padding: 3px 0 3px 22px;
+			line-height: 1.5;
+			color: #2a2a2a;
+		}
+		.openings-list > li::before {
+			content: "\25B8"; /* ▸ */
+			position: absolute;
+			left: 4px;
+			top: 4px;
+			color: #0066B3;
+			font-weight: 700;
+		}
+		.openings-list strong {
+			color: #003E78;
+		}
+		.opening-meta {
+			margin-top: 8px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6px 8px;
+			align-items: center;
+			font-size: 0.95em;
+			color: #4a4a4a;
+		}
+		.opening-chip {
+			display: inline-block;
+			padding: 3px 10px;
+			background: #ffffff;
+			border: 1px solid rgba(0, 108, 101, 0.35);
+			border-radius: 999px;
+			font-size: 0.88em;
+			font-weight: 600;
+			color: #0066B3 !important;
+			text-decoration: none !important;
+			transition: background 120ms ease, color 120ms ease, border-color 120ms ease, transform 120ms ease;
+		}
+		.opening-chip:hover, .opening-chip:focus {
+			background: #0066B3;
+			color: #ffffff !important;
+			border-color: #0066B3;
+			transform: translateY(-1px);
+			text-decoration: none !important;
+		}
+		.openings-cta {
+			margin: 12px 0 0;
+			padding-top: 10px;
+			border-top: 1px solid rgba(0, 108, 101, 0.15);
+			color: #2a2a2a;
+			font-size: 18px; /* match .openings-list font size (inherited from global p,form,ul rule) */
+		}
+		.openings-cta a {
+			font-weight: 600;
+		}
+
+		/* Bottom social icons row: placed above the TRANG logo in the footer. */
+		.footer-social {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 14px;
+			margin-bottom: 10px;
+		}
+
+		/* Make the social icons look monochrome (black/white style) without needing new image assets. */
+		.footer-social .social-icon-bw {
+			height: 39px; /* 1.5x larger (26px -> 39px) for better visibility */
+			width: auto;
+			filter: grayscale(100%) brightness(0);
+			opacity: 0.85;
+		}
+		.footer-social .social-icon-bw:hover {
+			opacity: 1;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./js/slideshow.js"></script>
+	<script type="text/javascript" src="./js/headers.js"></script>
+	<script type="text/javascript" src="./js/forbid.js"></script>
+  	<script type="text/javascript" src="./js/mobile.js"></script>
+
+</head>
+
+<body oncontextmenu="return false">
+	<div class="main-container">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="nav" style="background-color: #0066B3;">
+<div class="menu-bg">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header page-scroll">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+	<span class="logo cvlab"><img src="./asset/images/logo/hcmut-light.svg" id="logo"></span>	
+	<span class="logo cvlab"><img src="./asset/images/logo/trang_lab-light.svg" id="lablogo"></span>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="menu">
+        <li><a href="index.html" class="link-to-button" style='color: #ffffff;'>Home</a></li>
+        <li><a href="people.html" class="link-to-button" style='color: #ffffff;'>People</a></li>
+        <li><a href="publications.html" class="link-to-button" style='color: #ffffff;'>Publications</a></li>
+        <li><a href="teaching.html" class="link-to-button" style='color: #ffffff;'>Teaching</a></li>
+        <li><a href="contact.html" class="link-to-button" style='color: #ffffff;'>Contact</a></li>
+
+    </ul>
+  </div>
+  <!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->
+</nav>
+
+		<div class="col-md-12 column" style=" background-color: white; padding:65px 0px 0px 0px;"></div>
+
+		<div id="headimg-container">
+			<div id="header_1" class="header_slides">
+			  <div class="bannertext"><span class="bannerfont cvlab"><strong>Transformative Research in AI &amp; Generalization</strong></span></div>
+			</div>
+
+			<div id="header_2" class="header_slides">
+			  <div class="bannertext"><span class="bannerfont cvlab"><strong>Transformative Research in AI &amp; Generalization</strong></span></div>
+			</div>
+
+			<div id="header_3" class="header_slides">
+			  <div class="bannertext"><span class="bannerfont cvlab"><strong>Transformative Research in AI &amp; Generalization</strong></span></div>
+			</div>
+
+			<div id="header_4" class="header_slides">
+			  <div class="bannertext"><span class="bannerfont cvlab"><strong>Transformative Research in AI &amp; Generalization</strong></span></div>
+			</div>
+
+			<br>
+			<div class="header_indicators">
+			  <span class="header_dot" onclick="currentHeader(1)"></span> 
+			  <span class="header_dot" onclick="currentHeader(2)"></span> 
+			  <span class="header_dot" onclick="currentHeader(3)"></span> 
+			  <span class="header_dot" onclick="currentHeader(4)"></span> 
+			</div>
+		
+			<script language="JavaScript">showHeaders();</script> 
+		</div>
+			
+
+		<div class="content-container">
+			<div id="tittle-wrapper">
+				<h1>About Us</h1>
+				<br>
+			</div>
+
+		  <!--slideshow-->
+			<div id="slideshow-container">
+				<div class="slides">
+				  <a href="#"><img class="object-fit-cover" src="./asset/images/paper/placeholder.svg"></a>
+				  <div class="captiontext">Example Research Highlight 1 <br>
+				  A one-line summary of the project, shown under the teaser image.</div>
+				</div>
+				<div class="slides">
+				  <a href="#"><img class="object-fit-cover" src="./asset/images/paper/placeholder.svg"></a>
+				  <div class="captiontext">Example Research Highlight 2 <br>
+				  Replace this teaser and caption with your own project.</div>
+				</div>
+				<div class="slides">
+				  <a href="#"><img class="object-fit-cover" src="./asset/images/paper/placeholder.svg"></a>
+				  <div class="captiontext">Example Research Highlight 3 <br>
+				  Add or remove <code>.slides</code> blocks to change the count.</div>
+				</div>
+						</div>
+			<p style="margin-top: 80px;">
+				<strong>TRANG's Lab</strong> &mdash; <em>Transformative Research in Artificial Intelligence &amp; Generalization</em> &mdash; is a research group directed by <a href="#">Prof. [PI Name]</a>, working on artificial intelligence, machine learning, and computer vision, at <a href="https://cse.hcmut.edu.vn/">Faculty of Computer Science and Engineering</a>, <a href="https://hcmut.edu.vn/">Ho Chi Minh City University of Technology (HCMUT)</a>.
+				Our current research focuses on generalization and robustness, foundation models, open-world learning, generative AI, and their relevant fields.
+				The overarching goal of our research is to build AI systems that generalize beyond their training distribution &mdash; principled, reliable, and transformative in real-world deployment.
+			</p>
+
+			<div class="research-areas">
+				<span class="research-areas-label">Research areas:</span>
+				<span class="research-chip">Generalization &amp; Robustness</span>
+				<span class="research-chip">Open-World Learning</span>
+				<span class="research-chip">Foundation Models</span>
+				<span class="research-chip">Generative AI</span>
+				<span class="research-chip">Computer Vision</span>
+				<span class="research-chip">Vision-Language Models</span>
+				<span class="research-chip">Trustworthy / Agentic AI</span>
+			</div>
+
+
+			<div class="openings">
+				<div class="openings-title">Openings</div>
+				<ul class="openings-list">
+					<li>
+						<strong>PhD students</strong> &mdash; We are always looking for strong students to work on exciting research problems in computer vision, machine learning, and AI.
+						<div class="opening-meta">
+							<span>Funding &amp; scholarship programs:</span>
+							<a class="opening-chip" href="https://hcmut.edu.vn/" target="_blank" rel="noopener">HCMUT Graduate Scholarships</a>
+							<a class="opening-chip" href="https://vinif.org/" target="_blank" rel="noopener">VINIF Fellowship</a>
+							<a class="opening-chip" href="https://nafosted.gov.vn/" target="_blank" rel="noopener">NAFOSTED</a>
+						</div>
+					</li>
+					<li>
+						<strong>Postdocs / Research Assistants</strong> &mdash; Positions available in AI, machine learning, and computer vision, covering topics like generalization and robustness, foundation models, open-world learning, and generative / trustworthy / agentic AI.
+					</li>
+				</ul>
+				<p class="openings-cta">If you are interested in working with us, please send your CV and transcripts to <a href="mailto:info@trang-lab.org">info [at] trang-lab.org</a>.</p>
+			</div>
+
+			<script language="JavaScript">showSlides();</script>
+		</div>
+
+
+		<div class="content-container">
+			<div id="tittle-wrapper">
+			    <h1>News and Updates</h1>
+					<br>
+					<div class="limit-items">
+						<input type="checkbox" id="show-all">
+						<label for="show-all" class="text-show"> <span id="uparrow"></span> <span>SHOW MORE</span> <span id="uparrow"></span> </label>
+						<label for="show-all" class="text-hide"> <span id="downarrow"></span> <span>SHOW LESS</span> <span id="downarrow"></span> </label>
+
+						<div class="items">
+							<div class="newsitem">
+								<div class="newstag"><strong>Sep 2026:</strong></div><br>
+								<div class="newstext">TRANG&rsquo;s Lab is established at the Faculty of Computer Science and Engineering, HCMUT.</div>
+							</div>
+							<div class="newsitem">
+								<div class="newstag"><strong>Sep 2026:</strong></div><br>
+								<div class="newstext">We are recruiting PhD students, postdocs, and research assistants. See <a href="#openings">Openings</a>.</div>
+							</div>
+							<div class="newsitem">
+								<div class="newstag"><strong>Sep 2026:</strong></div><br>
+								<div class="newstext">Replace these entries with your own news &mdash; each one is a <code>.newsitem</code> block.</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+
+
+		<!-- NOTE: overflow:visible here because templatemo_style.css sets overflow:hidden on the container. -->
+		<div class="content-container" style="overflow: visible;">
+	<footer class="site-footer">
+		<div class="site-footer-cols">
+			<div class="site-footer-left">
+				<img class="site-footer-univ" src="./asset/images/logo/hcmut.svg" alt="HCMUT">
+				<img class="site-footer-logo" src="./asset/images/logo/trang_lab.svg" alt="TRANG">
+				<div class="site-footer-affil">
+					<div class="lab-name"><a href="index.html">TRANG's Lab</a></div>
+					<div><a href="https://cse.hcmut.edu.vn/" target="_blank" rel="noopener">Faculty of Computer Science and Engineering</a></div>
+					<div><a href="https://hcmut.edu.vn/" target="_blank" rel="noopener">Ho Chi Minh City University of Technology (HCMUT)</a></div>
+					<div class="addr">268 Ly Thuong Kiet, District 10, Ho Chi Minh City, Vietnam</div>
+				</div>
+			</div>
+			<div class="site-footer-right">
+				<div class="site-footer-connect-label">Connect</div>
+				<div class="site-footer-socials">
+					<a href="#" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+					<span class="sep" aria-hidden="true">&middot;</span>
+					<a href="#" target="_blank" rel="noopener" title="Lab GitHub"><i class="fa fa-github"></i></a>
+					<span class="sep" aria-hidden="true">&middot;</span>
+					<a href="#" target="_blank" rel="noopener" title="X"><span class="x-mark">&#x1D54F;</span></a>
+					<span class="sep" aria-hidden="true">&middot;</span>
+					<a href="mailto:info@trang-lab.org" target="_blank" rel="noopener" title="Email"><i class="fa fa-envelope"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="site-footer-bottom">
+			<p>Copyright &copy; <span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> TRANG's Lab. All Rights Reserved.</p>
+		</div>
+	</footer>
+		</div>
+
+	</div>
+
+<div id="extreme">
+<script src="https://efreecode.com/js.js" id="eXF-visai-0" async defer></script>
+</div>
+
+</body>
+</html>
