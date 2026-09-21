@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" font-family="Inter,Arial,sans-serif">
+  <rect width="400" height="280" fill="#0f1a10"/>
+  <rect x="0" y="230" width="400" height="50" fill="#1a2030"/>
+  <!-- Intersection -->
+  <rect x="0" y="130" width="400" height="100" fill="#1a2510"/>
+  <rect x="140" y="0" width="120" height="280" fill="#1a2510"/>
+  <!-- Road markings -->
+  <rect x="185" y="5" width="30" height="10" rx="1" fill="#2d3a1f"/>
+  <rect x="185" y="25" width="30" height="10" rx="1" fill="#2d3a1f"/>
+  <rect x="185" y="45" width="30" height="10" rx="1" fill="#2d3a1f"/>
+  <rect x="10" y="168" width="50" height="6" rx="1" fill="#2d3a1f"/>
+  <rect x="80" y="168" width="50" height="6" rx="1" fill="#2d3a1f"/>
+  <rect x="270" y="168" width="50" height="6" rx="1" fill="#2d3a1f"/>
+  <rect x="340" y="168" width="50" height="6" rx="1" fill="#2d3a1f"/>
+  <!-- Traffic light glow -->
+  <circle cx="135" cy="55" r="20" fill="#166534" opacity="0.4"/>
+  <circle cx="135" cy="55" r="10" fill="#22c55e" opacity="0.9"/>
+  <rect x="130" y="70" width="10" height="30" fill="#374151"/>
+  <!-- Cars at intersection -->
+  <rect x="155" y="155" width="90" height="55" rx="4" fill="#1e3040"/>
+  <rect x="153" y="153" width="94" height="59" rx="3" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <rect x="153" y="139" width="66" height="17" rx="3" fill="#22c55e"/>
+  <text x="186" y="151" fill="white" font-size="11" font-weight="700" text-anchor="middle">Car 96%</text>
+
+  <rect x="20" y="145" width="105" height="55" rx="4" fill="#2d1e40"/>
+  <rect x="18" y="143" width="109" height="59" rx="3" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+  <rect x="18" y="129" width="66" height="17" rx="3" fill="#a78bfa"/>
+  <text x="51" y="141" fill="white" font-size="11" font-weight="700" text-anchor="middle">Car 94%</text>
+
+  <!-- Cyclist -->
+  <ellipse cx="310" cy="158" rx="10" ry="22" fill="#f59e0b" opacity="0.8"/>
+  <ellipse cx="296" cy="170" r="8" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <ellipse cx="324" cy="170" r="8" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="298" y="150" width="26" height="36" rx="2" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <rect x="298" y="137" width="58" height="16" rx="2" fill="#fbbf24"/>
+  <text x="327" y="149" fill="white" font-size="10" font-weight="700" text-anchor="middle">Cyclist 90%</text>
+  <!-- Stats -->
+  <text x="200" y="253" fill="#a78bfa" font-size="13" font-weight="700" text-anchor="middle">3 objects · 67 FPS · 15ms</text>
+  <text x="200" y="270" fill="#94a3b8" font-size="10" text-anchor="middle">nuScenes — urban intersection</text>
+</svg>

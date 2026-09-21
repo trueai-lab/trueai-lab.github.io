@@ -1,289 +1,278 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<script>
-		var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
-            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
-    </script>
-	<title>TRANG's Lab</title>
-	<meta name="keywords" content="TRANG's Lab, HCMUT, Bach Khoa, artificial intelligence, machine learning, computer vision, generalization, foundation models, generative AI, Vietnam" />
-	<meta name="description" content="TRANG's Lab - Transformative Research in Artificial Intelligence & Generalization. AI research group at the Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT)." />
-	<Meta name="Robots" Content="Follow"> 
-
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#00549F">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#00549F">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#00549F">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-	<link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/templatemo_style.css?v=20260531f" rel="stylesheet" type="text/css">
-	<style>
-		/* Hover delay (~600ms) before revealing the QR. */
-
-
-
-		/* Footer placement: show the QR popup above the icon (footer sits near the bottom of the viewport). */
-
-		/* Mobile UX: center the popup in the viewport (not relative to the icon), and enlarge caption text. */
-		@media (max-width: 768px) {
-
-
-
-		}
-
-		/* Bottom social icons row: placed above the TRANG logo in the footer. */
-		.footer-social {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 14px;
-			margin-bottom: 10px;
-		}
-
-		/* Make the social icons look monochrome (black/white style) without needing new image assets. */
-		.footer-social .social-icon-bw {
-			height: 39px; /* 1.5x larger (26px -> 39px) for better visibility */
-			width: auto;
-			filter: grayscale(100%) brightness(0);
-			opacity: 0.85;
-		}
-		.footer-social .social-icon-bw:hover {
-			opacity: 1;
-		}
-
-		/* Former Members list: one row per person, compact text-only layout. */
-		.former-list {
-			margin: 6px 0 22px;
-			padding: 0;
-			list-style: none;
-		}
-		.former-list li {
-			padding: 4px 4px;
-			font-size: 15px;
-			line-height: 1.5;
-			color: #555;
-		}
-		.former-name {
-			font-weight: 700;
-			color: #222;
-			margin-right: 8px;
-		}
-		.former-name a {
-			margin-left: 5px;
-			font-size: 0.95em;
-			color: #0066B3;
-		}
-		.former-role { color: #444; }
-		.former-role small { color: #777; }
-		.former-next {
-			color: #0066B3;
-			font-style: italic;
-			font-size: 0.92em;
-			margin-left: 8px;
-		}
-		.former-next::before {
-			content: "\00B7\00A0"; /* middle dot + nbsp */
-			color: rgba(0, 108, 101, 0.5);
-			font-style: normal;
-			margin-right: 2px;
-		}
-	</style>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-	<script type="text/javascript" src="./js/forbid.js"></script>
-  	<script type="text/javascript" src="./js/mobile.js"></script>
-	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People &mdash; TrueAI | HCMUT</title>
+  <meta name="description" content="Meet the team at TrueAI (TRUstworthy &amp; gEneralizable AI), HCMUT." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+<body>
 
-<body oncontextmenu="return false">
-	<div class="main-container">
-
-<nav class="navbar navbar-default navbar-fixed-top" id="nav" style="background-color: #00549F;">
-<div class="menu-bg">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header page-scroll">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="lab-icon">AI</div>
+      <div class="lab-name">
+        TrueAI
+        <small>Trustworthy &amp; Generalizable AI &middot; HCMUT</small>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
     </button>
-	<span class="logo cvlab"><img src="./asset/images/logo/hcmut-light.svg" id="logo"></span>	
-	<span class="logo cvlab"><img src="./asset/images/logo/trang_lab-light.svg" id="lablogo"></span>
-  </div>
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="menu">
-        <li><a href="index.html" class="link-to-button" style='color: #ffffff;'>Home</a></li>
-        <li><a href="people.html" class="link-to-button" style='color: #ffffff;'>People</a></li>
-        <li><a href="publications.html" class="link-to-button" style='color: #ffffff;'>Publications</a></li>
-        <li><a href="teaching.html" class="link-to-button" style='color: #ffffff;'>Teaching</a></li>
-        <li><a href="contact.html" class="link-to-button" style='color: #ffffff;'>Contact</a></li>
-
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="people.html" class="active">People</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
-  <!-- /.navbar-collapse -->
-</div>
-<!-- /.container-fluid -->
 </nav>
 
-		<div class="col-md-12 column" style=" background-color: white; padding:80px 0px 0px 0px;"></div>
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+  <div class="container">
+    <h1><i class="fa-solid fa-users"></i> Our Team</h1>
+    <p>The people behind our research at HCMUT</p>
+  </div>
+</div>
 
-		<div class="content-container">
-			<div id="tittle-wrapper">
-			<h1 class="left-text">Principal Investigator</h1>
-			</div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Prof. [PI Name]</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> Associate Professor </div>
-					<div class="mail">pi [at] trang-lab.org</div>
-				</div>
-		</div>
+<!-- ===== MAIN CONTENT ===== -->
+<section>
+  <div class="container">
 
-		<div class="content-container">
-			<div id="tittle-wrapper">
-			<h1 class="left-text">Research Fellows</h1>
-			</div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Postdoc Name 1</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> Postdoc, 2026 -  </div>
-				</div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Postdoc Name 2</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> Postdoc, 2026 -  </div>
-				</div>
-		</div>
+    <!-- ===== PRINCIPAL INVESTIGATOR ===== -->
+    <div class="people-section">
+      <div class="people-section-title"><i class="fa-solid fa-star"></i> Principal Investigator</div>
 
-		<div class="content-container">
-			<div id="tittle-wrapper"><h1 class="left-text">Research Students</h1></div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Student Name 1</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> PhD, 2026 -  </div>
-				</div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Student Name 2</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> PhD, 2026 -  </div>
-				</div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Student Name 3</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> PhD, 2026 -  </div>
-				</div>
-		</div>
+      <div class="pi-card">
+        <div class="pi-photo">👨‍🔬</div>
+        <div class="pi-info">
+          <h3>Prof. [PI Full Name]</h3>
+          <div class="pi-title">Associate Professor</div>
+          <div class="pi-affil">Faculty of Computer Science &amp; Engineering, HCMUT</div>
+          <p>
+            Description
+          </p>
+          <p>
+            He/she serves as an area chair / reviewer for major conferences and journals in the field.
+            Prior to joining HCMUT, he/she was a postdoctoral researcher at [Previous Institution].
+          </p>
+          <div class="pi-links">
+            <a href="#" class="pi-link"><i class="fa-solid fa-envelope"></i> Email</a>
+            <a href="#" class="pi-link"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+            <a href="#" class="pi-link"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="pi-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="#" class="pi-link"><i class="fa-solid fa-globe"></i> Homepage</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<div class="content-container">
-			<div id="tittle-wrapper"><h1 class="left-text">Associated Members</h1></div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Associate Name 1</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> PhD at HCMUT, 2026 -  </div>
-				</div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Associate Name 2</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> PhD at HCMUT, 2026 -  </div>
-				</div>
-		</div>
+    <!-- ===== PhD STUDENTS ===== -->
+    <div class="people-section">
+      <div class="people-section-title"><i class="fa-solid fa-user-graduate"></i> PhD Students</div>
+      <div class="members-grid">
 
-		<div class="content-container">
-			<div id="tittle-wrapper"><h1 class="left-text">Undergraduate & Master Students</h1></div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Junior Member 1</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> MSc at HCMUT </div>
-				</div>
-				<div class="faculty">
-					<img class="facimg" src="./asset/images/people/avatar.svg">
-					<div><b>Junior Member 2</b>&nbsp;<a href="#"><span class="glyphicon glyphicon-link"/></a></div>
-					<div> MSc at HCMUT </div>
-				</div>
-		</div>
+        <div class="member-card">
+          <div class="member-photo">👩‍💻</div>
+          <div class="member-name"><a href="#">Nguyen Thi A</a></div>
+          <div class="member-role">PhD Student</div>
+          <div class="member-start">2022 Fall —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="member-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="#" class="member-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
 
-		<div class="content-container">
-			<div id="tittle-wrapper"><h1 class="left-text">Former Members</h1></div>
+        <div class="member-card">
+          <div class="member-photo">👨‍💻</div>
+          <div class="member-name"><a href="#">Tran Van B</a></div>
+          <div class="member-role">PhD Student</div>
+          <div class="member-start">2022 Fall —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="member-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="#" class="member-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
 
-				<div id="tittle-wrapper"><h3 class="left-text">PhD/Postdoc</h3></div>
+        <div class="member-card">
+          <div class="member-photo">👩‍💻</div>
+          <div class="member-name"><a href="#">Le Thi C</a></div>
+          <div class="member-role">PhD Student</div>
+          <div class="member-start">2023 Spring —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="member-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          </div>
+        </div>
 
-				<ul class="former-list">
-					<li>
-						<span class="former-name">Former Member 1 <a href="#" title="Homepage"><span class="glyphicon glyphicon-link"></span></a></span>
-						<span class="former-role">PhD at HCMUT, 2022&ndash;2026</span>
-						<span class="former-next">Next: [Current position]</span>
-					</li>
-					<li>
-						<span class="former-name">Former Member 2 <a href="#" title="Homepage"><span class="glyphicon glyphicon-link"></span></a></span>
-						<span class="former-role">PhD at HCMUT, 2022&ndash;2026</span>
-						<span class="former-next">Next: [Current position]</span>
-					</li>
-				</ul>
+        <div class="member-card">
+          <div class="member-photo">👨‍💻</div>
+          <div class="member-name"><a href="#">Pham Duc D</a></div>
+          <div class="member-role">PhD Student</div>
+          <div class="member-start">2023 Fall —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="member-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
 
+        <div class="member-card">
+          <div class="member-photo">👩‍💻</div>
+          <div class="member-name"><a href="#">Hoang Thi E</a></div>
+          <div class="member-role">PhD Student</div>
+          <div class="member-start">2024 Fall —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="member-link" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          </div>
+        </div>
 
-				<div id="tittle-wrapper"><h4 class="left-text">Master/UG/Intern/RA</h4></div>
+      </div>
+    </div>
 
-				<ul class="former-list">
-					<li>
-						<span class="former-name">Former Member 1 <a href="#" title="Homepage"><span class="glyphicon glyphicon-link"></span></a></span>
-						<span class="former-role">MSc at HCMUT, 2024&ndash;2026</span>
-						<span class="former-next">Next: [Current position]</span>
-					</li>
-					<li>
-						<span class="former-name">Former Member 2 <a href="#" title="Homepage"><span class="glyphicon glyphicon-link"></span></a></span>
-						<span class="former-role">MSc at HCMUT, 2024&ndash;2026</span>
-						<span class="former-next">Next: [Current position]</span>
-					</li>
-				</ul>
+    <!-- ===== MASTER STUDENTS ===== -->
+    <div class="people-section">
+      <div class="people-section-title"><i class="fa-solid fa-user-tie"></i> Master Students</div>
+      <div class="members-grid">
 
-		</div>
-		
-		<!-- NOTE: overflow:visible here because templatemo_style.css sets overflow:hidden on the container. -->
-		<div class="content-container" style="overflow: visible;">
-			<div id="project-news-wrapper" style="overflow: visible;">
-	<footer class="site-footer">
-		<div class="site-footer-cols">
-			<div class="site-footer-left">
-				<img class="site-footer-univ" src="./asset/images/logo/hcmut.svg" alt="HCMUT">
-				<img class="site-footer-logo" src="./asset/images/logo/trang_lab.svg" alt="TRANG">
-				<div class="site-footer-affil">
-					<div class="lab-name"><a href="index.html">TRANG's Lab</a></div>
-					<div><a href="https://cse.hcmut.edu.vn/" target="_blank" rel="noopener">Faculty of Computer Science and Engineering</a></div>
-					<div><a href="https://hcmut.edu.vn/" target="_blank" rel="noopener">Ho Chi Minh City University of Technology (HCMUT)</a></div>
-					<div class="addr">268 Ly Thuong Kiet, District 10, Ho Chi Minh City, Vietnam</div>
-				</div>
-			</div>
-			<div class="site-footer-right">
-				<div class="site-footer-connect-label">Connect</div>
-				<div class="site-footer-socials">
-					<a href="#" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-					<span class="sep" aria-hidden="true">&middot;</span>
-					<a href="#" target="_blank" rel="noopener" title="Lab GitHub"><i class="fa fa-github"></i></a>
-					<span class="sep" aria-hidden="true">&middot;</span>
-					<a href="#" target="_blank" rel="noopener" title="X"><span class="x-mark">&#x1D54F;</span></a>
-					<span class="sep" aria-hidden="true">&middot;</span>
-					<a href="mailto:info@trang-lab.org" target="_blank" rel="noopener" title="Email"><i class="fa fa-envelope"></i></a>
-				</div>
-			</div>
-		</div>
-		<div class="site-footer-bottom">
-			<p>Copyright &copy; <span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> TRANG's Lab. All Rights Reserved.</p>
-		</div>
-	</footer>
+        <div class="member-card">
+          <div class="member-photo">👨‍🎓</div>
+          <div class="member-name"><a href="#">Vo Minh F</a></div>
+          <div class="member-role">Master Student</div>
+          <div class="member-start">2024 Fall —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="member-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
 
-			</div>
-		</div>
+        <div class="member-card">
+          <div class="member-photo">👩‍🎓</div>
+          <div class="member-name"><a href="#">Dinh Thi G</a></div>
+          <div class="member-role">Master Student</div>
+          <div class="member-start">2024 Fall —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
 
+        <div class="member-card">
+          <div class="member-photo">👨‍🎓</div>
+          <div class="member-name"><a href="#">Bui Quoc H</a></div>
+          <div class="member-role">Master Student</div>
+          <div class="member-start">2025 Spring —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="member-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
 
+      </div>
+    </div>
+
+    <!-- ===== UNDERGRADUATE / INTERN ===== -->
+    <div class="people-section">
+      <div class="people-section-title"><i class="fa-solid fa-flask"></i> Undergraduate &amp; Research Interns</div>
+      <div class="members-grid">
+
+        <div class="member-card">
+          <div class="member-photo">👨‍🔬</div>
+          <div class="member-name">Intern I</div>
+          <div class="member-role">Research Intern</div>
+          <div class="member-start">2025 Spring —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">👩‍🔬</div>
+          <div class="member-name">Intern J</div>
+          <div class="member-role">Undergraduate Researcher</div>
+          <div class="member-start">2025 Spring —</div>
+          <div class="member-links">
+            <a href="#" class="member-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== ALUMNI ===== -->
+    <div class="people-section">
+      <div class="people-section-title"><i class="fa-solid fa-award"></i> Alumni</div>
+
+      <table class="alumni-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Degree</th>
+            <th>Year</th>
+            <th>Thesis / Research Topic</th>
+            <th>Current Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hoang Van O</td>
+            <td>Master</td>
+            <td>2023</td>
+            <td>Federated Learning for Privacy-Preserving Healthcare AI</td>
+            <td>PhD Student, NUS Singapore</td>
+          </tr>
+       
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-title">TrueAI &mdash; Trustworthy &amp; Generalizable AI</div>
+        <p>Faculty of Computer Science &amp; Engineering<br>
+        Ho Chi Minh City University of Technology<br>
+        268 Lý Thường Kiệt, District 10, HCMC, Vietnam</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact &amp; Join Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-icon" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="#" class="social-icon" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 TrueAI, HCMUT. All rights reserved.</span>
+      <span>Built with ❤️ for science</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="Inter, Arial, sans-serif">
+  <rect width="1200" height="500" fill="#0d1117"/>
+
+  <!-- Title overlay -->
+  <rect x="0" y="0" width="1200" height="60" fill="rgba(0,48,135,0.85)"/>
+  <text x="600" y="38" fill="white" font-size="22" font-weight="700" text-anchor="middle">EfficientDet-T: Real-Time Object Detection Results on nuScenes Dataset</text>
+
+  <!-- Scene 1 -->
+  <rect x="20" y="80" width="370" height="260" rx="6" fill="#1a1f2e"/>
+  <!-- Road -->
+  <rect x="20" y="270" width="370" height="70" fill="#2a2f3e"/>
+  <rect x="170" y="275" width="20" height="55" fill="#4a5568" rx="2"/>
+  <!-- Cars -->
+  <rect x="80" y="200" width="100" height="55" rx="4" fill="#2563eb" opacity="0.9"/>
+  <rect x="220" y="190" width="120" height="60" rx="4" fill="#dc2626" opacity="0.9"/>
+  <rect x="50" y="150" width="80" height="45" rx="3" fill="#059669" opacity="0.9"/>
+  <!-- Bounding boxes -->
+  <rect x="78" y="198" width="104" height="59" rx="2" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <rect x="218" y="188" width="124" height="64" rx="2" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <rect x="48" y="148" width="84" height="49" rx="2" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <!-- Labels -->
+  <rect x="78" y="186" width="56" height="16" rx="2" fill="#22c55e"/>
+  <text x="106" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">Car 97%</text>
+  <rect x="218" y="176" width="56" height="16" rx="2" fill="#22c55e"/>
+  <text x="246" y="188" fill="white" font-size="11" font-weight="600" text-anchor="middle">Car 95%</text>
+  <rect x="48" y="136" width="72" height="16" rx="2" fill="#22c55e"/>
+  <text x="84" y="148" fill="white" font-size="11" font-weight="600" text-anchor="middle">Truck 91%</text>
+  <!-- Pedestrians -->
+  <ellipse cx="310" cy="230" rx="12" ry="28" fill="#f59e0b" opacity="0.85"/>
+  <rect x="298" y="228" width="24" height="40" rx="2" fill="#f59e0b" opacity="0.85"/>
+  <rect x="296" y="226" width="28" height="54" rx="2" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <rect x="296" y="214" width="40" height="16" rx="2" fill="#fbbf24"/>
+  <text x="316" y="226" fill="white" font-size="10" font-weight="600" text-anchor="middle">Ped 89%</text>
+  <!-- Stats -->
+  <text x="205" y="360" fill="#22c55e" font-size="14" font-weight="700" text-anchor="middle">Ours: 47.3 mAP @ 68 FPS</text>
+
+  <!-- Scene 2 -->
+  <rect x="415" y="80" width="370" height="260" rx="6" fill="#1a1f2e"/>
+  <rect x="415" y="270" width="370" height="70" fill="#2a2f3e"/>
+  <!-- Night scene -->
+  <rect x="415" y="80" width="370" height="190" fill="#0d1117"/>
+  <!-- Headlights glow -->
+  <ellipse cx="530" cy="250" rx="40" ry="15" fill="#fef08a" opacity="0.3"/>
+  <ellipse cx="730" cy="240" rx="35" ry="12" fill="#fef08a" opacity="0.25"/>
+  <!-- Cars in night -->
+  <rect x="480" y="210" width="110" height="55" rx="4" fill="#1e3a5f"/>
+  <rect x="480" y="208" width="114" height="59" rx="2" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
+  <rect x="480" y="196" width="60" height="16" rx="2" fill="#60a5fa"/>
+  <text x="510" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">Car 94%</text>
+  <rect x="680" y="200" width="90" height="50" rx="4" fill="#1e3a5f"/>
+  <rect x="678" y="198" width="94" height="54" rx="2" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
+  <rect x="678" y="186" width="60" height="16" rx="2" fill="#60a5fa"/>
+  <text x="708" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">Car 88%</text>
+  <text x="600" y="360" fill="#60a5fa" font-size="14" font-weight="700" text-anchor="middle">Night Scene: 44.1 mAP @ 65 FPS</text>
+
+  <!-- Scene 3 / Comparison -->
+  <rect x="810" y="80" width="370" height="260" rx="6" fill="#1a1f2e"/>
+  <!-- Split: left baseline, right ours -->
+  <rect x="810" y="80" width="185" height="260" fill="#1a1f2e"/>
+  <rect x="995" y="80" width="185" height="260" fill="#131820"/>
+  <line x1="995" y1="80" x2="995" y2="340" stroke="white" stroke-width="3" stroke-dasharray="6,4"/>
+  <!-- Left: Baseline (few boxes, some missed) -->
+  <rect x="840" y="150" width="90" height="50" rx="3" fill="#7f1d1d" opacity="0.6"/>
+  <rect x="838" y="148" width="94" height="54" rx="2" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+  <rect x="900" y="200" width="70" height="40" rx="3" fill="#7f1d1d" opacity="0.6"/>
+  <!-- Right: Ours (tight boxes) -->
+  <rect x="1020" y="148" width="94" height="55" rx="3" fill="#14532d" opacity="0.7"/>
+  <rect x="1018" y="146" width="98" height="59" rx="2" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <rect x="1100" y="198" width="70" height="42" rx="3" fill="#14532d" opacity="0.7"/>
+  <rect x="1098" y="196" width="74" height="46" rx="2" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <rect x="1018" y="134" width="50" height="15" rx="2" fill="#22c55e"/>
+  <text x="1043" y="146" fill="white" font-size="10" font-weight="600" text-anchor="middle">Car</text>
+  <!-- Labels -->
+  <text x="902" y="370" fill="#ef4444" font-size="13" font-weight="700" text-anchor="middle">Baseline</text>
+  <text x="1087" y="370" fill="#22c55e" font-size="13" font-weight="700" text-anchor="middle">Ours</text>
+  <text x="995" y="455" fill="#94a3b8" font-size="13" text-anchor="middle">Qualitative comparison on KITTI test set</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="440" width="1200" height="60" fill="rgba(0,48,135,0.7)"/>
+  <text x="200" y="476" fill="white" font-size="15" font-weight="700" text-anchor="middle">47.3 mAP</text>
+  <text x="200" y="492" fill="rgba(255,255,255,0.7)" font-size="11" text-anchor="middle">nuScenes test</text>
+  <text x="480" y="476" fill="white" font-size="15" font-weight="700" text-anchor="middle">68 FPS</text>
+  <text x="480" y="492" fill="rgba(255,255,255,0.7)" font-size="11" text-anchor="middle">RTX 3090</text>
+  <text x="720" y="476" fill="white" font-size="15" font-weight="700" text-anchor="middle">+3.2 mAP</text>
+  <text x="720" y="492" fill="rgba(255,255,255,0.7)" font-size="11" text-anchor="middle">vs. DETR-based SOTA</text>
+  <text x="960" y="476" fill="white" font-size="15" font-weight="700" text-anchor="middle">2.4× faster</text>
+  <text x="960" y="492" fill="rgba(255,255,255,0.7)" font-size="11" text-anchor="middle">vs. baseline</text>
+</svg>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EfficientDet-T — CVPR 2025</title>
+  <meta name="description" content="EfficientDet-T: An Efficient Transformer Architecture for Real-Time Object Detection in Autonomous Driving. CVPR 2025." />
+  <meta property="og:title"       content="EfficientDet-T: Efficient Transformer for Real-Time Object Detection" />
+  <meta property="og:description" content="We propose EfficientDet-T, achieving 47.3 mAP at 68 FPS on nuScenes. CVPR 2025." />
+  <meta property="og:image"       content="static/images/teaser.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="top-bar">
+  <a href="https://trueai-lab.github.io" target="_blank">
+    <i class="fa-solid fa-arrow-left"></i> TrueAI — HCMUT
+  </a>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="paper-header">
+  <div class="container">
+
+    <div class="paper-venue">CVPR 2025</div>
+
+    <h1 class="paper-title">
+      EfficientDet-T: An Efficient Transformer Architecture<br>
+      for Real-Time Object Detection in Autonomous Driving
+    </h1>
+
+    <div class="authors">
+      <span class="author"><a href="#">Nguyen Thi Anh</a><sup>1*</sup></span>
+      <span class="author">,&nbsp;<a href="#">Tran Van Binh</a><sup>1*</sup></span>
+      <span class="author">,&nbsp;<a href="#">Le Thi Cam</a><sup>1</sup></span>
+      <span class="author">,&nbsp;<a href="#">Pham Duc Dung</a><sup>1</sup></span>
+      <span class="author">,&nbsp;<a href="https://trueai-lab.github.io/people.html"><u>Prof. [PI Name]</u></a><sup>1†</sup></span>
+    </div>
+    <p style="font-size:0.78rem; color:var(--text-sub); margin-bottom:0.7rem;">
+      * Equal contribution &nbsp;|&nbsp; † Corresponding author
+    </p>
+
+    <div class="affiliations">
+      <span class="affil"><sup>1</sup> Ho Chi Minh City University of Technology (HCMUT), VNU-HCM</span>
+    </div>
+
+    <div class="paper-links">
+      <a href="#" class="link-btn filled" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> Paper
+      </a>
+      <a href="#" class="link-btn" target="_blank">
+        <i class="fa-solid fa-scroll"></i> arXiv
+      </a>
+      <a href="https://github.com/tin1408/efficient-det-t" class="link-btn" target="_blank">
+        <i class="fa-brands fa-github"></i> Code
+      </a>
+      <a href="#" class="link-btn" target="_blank">
+        <i class="fa-solid fa-database"></i> Models
+      </a>
+      <a href="#bibtex" class="link-btn">
+        <i class="fa-solid fa-quote-right"></i> BibTeX
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- ===== TEASER ===== -->
+<section id="teaser">
+  <div class="container">
+    <div class="teaser-wrap">
+      <img src="static/images/teaser.svg" alt="EfficientDet-T detection results" loading="lazy" />
+    </div>
+    <p class="teaser-caption">
+      EfficientDet-T achieves <strong>47.3 mAP at 68 FPS</strong> on nuScenes, outperforming prior
+      real-time detectors under diverse conditions including night-time and adverse weather.
+    </p>
+  </div>
+</section>
+
+<!-- ===== ABSTRACT ===== -->
+<section id="abstract">
+  <div class="container">
+    <h2 class="sec-title">Abstract</h2>
+    <p class="abstract-text">
+      Real-time object detection for autonomous driving demands both high accuracy and low latency,
+      yet existing transformer-based detectors struggle to meet these twin requirements simultaneously.
+      We present <strong>EfficientDet-T</strong>, a novel transformer architecture that bridges this
+      gap through two key innovations: <em>Sparse Token Sampling</em> (STS) and
+      <em>Adaptive Query Selection</em> (AQS).
+    </p>
+    <p class="abstract-text">
+      STS reduces the number of attended tokens by 60% by dynamically selecting foreground-relevant
+      regions via a lightweight saliency predictor, cutting encoder FLOPs by 40% with negligible
+      accuracy loss. AQS replaces the static learned queries in conventional DETR-like decoders with
+      content-aware queries initialized from top-scoring encoder tokens, improving small-object
+      recall by 5.1 points on the nuScenes benchmark.
+    </p>
+    <p class="abstract-text">
+      Trained end-to-end on nuScenes and KITTI, EfficientDet-T achieves <strong>47.3 mAP at 68 FPS</strong>
+      on a single RTX 3090 GPU — a +3.2 mAP improvement over the previous real-time SOTA
+      while running <strong>2.4× faster</strong> than the baseline. Extensive experiments under
+      night-time, rainy, and crowded urban conditions demonstrate robust generalization across
+      challenging real-world driving scenarios.
+    </p>
+  </div>
+</section>
+
+<!-- ===== METHOD ===== -->
+<section id="method">
+  <div class="container">
+    <h2 class="sec-title">Method</h2>
+
+    <div class="method-img">
+      <img src="static/images/method.svg" alt="EfficientDet-T architecture overview" loading="lazy" />
+    </div>
+    <p class="method-caption">
+      Figure 2. Architecture of EfficientDet-T. An EfficientNet-B4 backbone extracts multi-scale
+      features, which are sparsified via STS before being fed into the deformable transformer encoder.
+      AQS initializes decoder queries from top encoder tokens, enabling NMS-free inference.
+    </p>
+
+    <div style="max-width:780px; margin:1.5rem auto 0; font-size:0.97rem; line-height:1.8;">
+      <p>
+        <strong>Sparse Token Sampling (STS).</strong> Standard deformable attention still processes
+        all spatial tokens, many of which correspond to background regions. STS uses a lightweight
+        2-layer CNN to predict a foreground score per token and retains only the top-<em>k</em> = 30%,
+        reducing encoder memory and compute significantly while preserving recall on foreground objects.
+      </p>
+      <p>
+        <strong>Adaptive Query Selection (AQS).</strong> Rather than learning a fixed set of
+        positional queries as in DETR, AQS selects the highest-confidence encoder outputs as initial
+        decoder queries at each forward pass. This content-aware initialization accelerates decoder
+        convergence and boosts recall for small and distant objects — a critical requirement in
+        autonomous driving scenarios.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section id="results">
+  <div class="container">
+    <h2 class="sec-title">Results</h2>
+
+    <!-- Quantitative -->
+    <h3 style="text-align:center; color:var(--text-sub); font-size:0.92rem; margin-bottom:1rem; font-weight:500;">
+      Table 1. Detection performance on nuScenes <em>val</em> set. FPS measured on RTX 3090, TensorRT FP16.
+    </h3>
+    <div style="overflow-x:auto; margin-bottom:2.5rem;">
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th style="text-align:left;">Method</th>
+            <th>Backbone</th>
+            <th>mAP ↑</th>
+            <th>NDS ↑</th>
+            <th>mATE ↓</th>
+            <th>FPS ↑</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FCOS3D <em>[ICCV'21]</em></td>
+            <td>ResNet-101</td>
+            <td>35.8</td><td>42.8</td><td>0.690</td><td>19</td>
+          </tr>
+          <tr>
+            <td>DETR3D <em>[CoRL'21]</em></td>
+            <td>ResNet-101</td>
+            <td>34.7</td><td>41.2</td><td>0.716</td><td>8</td>
+          </tr>
+          <tr>
+            <td>BEVFormer <em>[ECCV'22]</em></td>
+            <td>ResNet-101</td>
+            <td>41.6</td><td>51.7</td><td>0.673</td><td>12</td>
+          </tr>
+          <tr>
+            <td>PETR <em>[ECCV'22]</em></td>
+            <td>VoVNet-99</td>
+            <td>44.1</td><td>53.3</td><td>0.641</td><td>28</td>
+          </tr>
+          <tr>
+            <td>Sparse4D <em>[arXiv'22]</em></td>
+            <td>ResNet-101</td>
+            <td>44.7</td><td>53.9</td><td>0.632</td><td>35</td>
+          </tr>
+          <tr>
+            <td>Far3D <em>[AAAI'24]</em></td>
+            <td>ViT-Base</td>
+            <td>45.8</td><td>55.1</td><td>0.618</td><td>29</td>
+          </tr>
+          <tr class="ours">
+            <td><strong>EfficientDet-T (Ours)</strong></td>
+            <td><strong>EfficientNet-B4</strong></td>
+            <td><strong>47.3</strong></td>
+            <td><strong>56.8</strong></td>
+            <td><strong>0.601</strong></td>
+            <td><strong>68</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Qualitative Gallery -->
+    <h3 style="text-align:center; color:var(--text-sub); font-size:0.92rem; margin-bottom:1rem; font-weight:500;">
+      Qualitative results across diverse driving conditions
+    </h3>
+    <div class="results-grid">
+      <div class="result-item">
+        <img src="static/images/result1.svg" alt="Daytime detection" loading="lazy" />
+        <div class="result-caption">Daytime · Urban</div>
+      </div>
+      <div class="result-item">
+        <img src="static/images/result2.svg" alt="Nighttime detection" loading="lazy" />
+        <div class="result-caption">Night · Highway</div>
+      </div>
+      <div class="result-item">
+        <img src="static/images/result3.svg" alt="Rain detection" loading="lazy" />
+        <div class="result-caption">Rainy · Adverse Weather</div>
+      </div>
+      <div class="result-item">
+        <img src="static/images/result4.svg" alt="Intersection detection" loading="lazy" />
+        <div class="result-caption">Intersection · Dense Traffic</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BIBTEX ===== -->
+<section id="bibtex">
+  <div class="container">
+    <h2 class="sec-title">Citation</h2>
+    <div class="bibtex-box">
+      <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+@inproceedings{nguyen2025efficientdett,
+  title     = {EfficientDet-T: An Efficient Transformer Architecture for
+               Real-Time Object Detection in Autonomous Driving},
+  author    = {Nguyen, Thi Anh and Tran, Van Binh and Le, Thi Cam and
+               Pham, Duc Dung and [PI Name]},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision
+               and Pattern Recognition (CVPR)},
+  year      = {2025}
+}</div>
+  </div>
+</section>
+
+<!-- ===== ACKNOWLEDGEMENTS ===== -->
+<section>
+  <div class="container" style="text-align:center; max-width:700px; margin:0 auto;">
+    <h2 class="sec-title">Acknowledgements</h2>
+    <p style="font-size:0.92rem; color:var(--text-sub);">
+      This work was supported by the Vietnam National Foundation for Science and Technology
+      Development (NAFOSTED) under grant No. 102.05-2023.XX. We thank the HCMUT HPC cluster
+      for providing computing resources.
+    </p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>
+    &copy; 2025 · EfficientDet-T ·
+    <a href="https://trueai-lab.github.io" target="_blank">TrueAI, HCMUT</a>
+  </p>
+  <p style="margin-top:0.3rem; font-size:0.78rem; opacity:0.6;">
+    Template adapted from
+    <a href="https://github.com/tin1408/paper-template" target="_blank">tin1408/paper-template</a>
+    · Licensed under CC BY-SA 4.0
+  </p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

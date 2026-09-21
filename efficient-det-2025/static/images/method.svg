@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" font-family="Inter, Arial, sans-serif">
+  <rect width="1100" height="420" fill="#f8f9fb" rx="8"/>
+
+  <!-- ===== INPUT ===== -->
+  <rect x="20" y="160" width="110" height="100" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="75" y="200" fill="#1e40af" font-size="12" font-weight="700" text-anchor="middle">Input</text>
+  <text x="75" y="218" fill="#1e40af" font-size="11" text-anchor="middle">Image</text>
+  <text x="75" y="234" fill="#3b82f6" font-size="10" text-anchor="middle">1280×720×3</text>
+  <!-- Image grid lines -->
+  <line x1="45" y1="248" x2="105" y2="248" stroke="#93c5fd" stroke-width="1"/>
+  <line x1="75" y1="168" x2="75" y2="255" stroke="#93c5fd" stroke-width="1"/>
+
+  <!-- Arrow -->
+  <line x1="130" y1="210" x2="158" y2="210" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== BACKBONE ===== -->
+  <rect x="160" y="120" width="160" height="180" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="240" y="148" fill="#5b21b6" font-size="13" font-weight="700" text-anchor="middle">Backbone</text>
+  <text x="240" y="164" fill="#7c3aed" font-size="10" text-anchor="middle">EfficientNet-B4</text>
+  <!-- Feature maps -->
+  <rect x="178" y="175" width="50" height="35" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="203" y="197" fill="#5b21b6" font-size="9" font-weight="600" text-anchor="middle">P3 80×45</text>
+  <rect x="178" y="218" width="50" height="28" rx="4" fill="#a78bfa" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="203" y="236" fill="white" font-size="9" font-weight="600" text-anchor="middle">P4 40×23</text>
+  <rect x="178" y="254" width="50" height="22" rx="4" fill="#7c3aed" stroke="#5b21b6" stroke-width="1.5"/>
+  <text x="203" y="269" fill="white" font-size="9" font-weight="600" text-anchor="middle">P5 20×12</text>
+  <!-- NEW: Sparse Token Sampling -->
+  <rect x="240" y="175" width="68" height="100" rx="4" fill="white" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="274" y="193" fill="#5b21b6" font-size="9" font-weight="700" text-anchor="middle">Sparse Token</text>
+  <text x="274" y="205" fill="#5b21b6" font-size="9" font-weight="700" text-anchor="middle">Sampling</text>
+  <circle cx="258" cy="225" r="5" fill="#7c3aed" opacity="0.7"/>
+  <circle cx="274" cy="218" r="4" fill="#7c3aed" opacity="0.5"/>
+  <circle cx="286" cy="232" r="6" fill="#7c3aed" opacity="0.9"/>
+  <circle cx="265" cy="245" r="4" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="280" cy="252" r="5" fill="#7c3aed" opacity="0.8"/>
+  <text x="274" y="270" fill="#7c3aed" font-size="8" text-anchor="middle">top-k tokens</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="210" x2="348" y2="210" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== TRANSFORMER ===== -->
+  <rect x="350" y="100" width="200" height="220" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="125" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">Deformable</text>
+  <text x="450" y="141" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">Transformer</text>
+  <text x="450" y="157" fill="#d97706" font-size="10" text-anchor="middle">(our contribution)</text>
+
+  <!-- Encoder blocks -->
+  <rect x="368" y="168" width="160" height="36" rx="4" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+  <text x="448" y="186" fill="#92400e" font-size="10" font-weight="600" text-anchor="middle">Multi-scale Deformable Attn</text>
+  <text x="448" y="198" fill="#b45309" font-size="9" text-anchor="middle">encoder × 3</text>
+
+  <!-- Star: our contribution -->
+  <polygon points="535,175 537,182 544,182 539,186 541,193 535,189 529,193 531,186 526,182 533,182" fill="#f59e0b"/>
+
+  <rect x="368" y="212" width="160" height="36" rx="4" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
+  <text x="448" y="230" fill="#92400e" font-size="10" font-weight="600" text-anchor="middle">Adaptive Query Selection</text>
+  <text x="448" y="242" fill="#b45309" font-size="9" text-anchor="middle">★ novel module</text>
+
+  <rect x="368" y="256" width="160" height="36" rx="4" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+  <text x="448" y="274" fill="#92400e" font-size="10" font-weight="600" text-anchor="middle">Cross-Attn Decoder</text>
+  <text x="448" y="286" fill="#b45309" font-size="9" text-anchor="middle">decoder × 6</text>
+
+  <!-- Arrow -->
+  <line x1="550" y1="210" x2="578" y2="210" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== PREDICTION HEADS ===== -->
+  <rect x="580" y="130" width="150" height="160" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="655" y="158" fill="#14532d" font-size="13" font-weight="700" text-anchor="middle">Detection</text>
+  <text x="655" y="174" fill="#14532d" font-size="13" font-weight="700" text-anchor="middle">Heads</text>
+
+  <rect x="596" y="186" width="118" height="30" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="655" y="205" fill="#14532d" font-size="10" font-weight="600" text-anchor="middle">Box Regression Head</text>
+
+  <rect x="596" y="224" width="118" height="30" rx="4" fill="#86efac" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="655" y="243" fill="#14532d" font-size="10" font-weight="600" text-anchor="middle">Classification Head</text>
+
+  <rect x="596" y="262" width="118" height="14" rx="3" fill="#4ade80" stroke="#16a34a" stroke-width="1"/>
+  <text x="655" y="273" fill="#14532d" font-size="9" font-weight="600" text-anchor="middle">Hungarian Matching</text>
+
+  <!-- Arrow -->
+  <line x1="730" y1="210" x2="758" y2="210" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== OUTPUT ===== -->
+  <rect x="760" y="140" width="150" height="140" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="835" y="168" fill="#991b1b" font-size="13" font-weight="700" text-anchor="middle">Output</text>
+
+  <!-- boxes -->
+  <rect x="778" y="178" width="55" height="35" rx="3" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="805" y="196" fill="#7f1d1d" font-size="9" font-weight="600" text-anchor="middle">Boxes</text>
+  <text x="805" y="207" fill="#991b1b" font-size="8" text-anchor="middle">(cx,cy,w,h)</text>
+
+  <rect x="843" y="178" width="55" height="35" rx="3" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="870" y="196" fill="#7f1d1d" font-size="9" font-weight="600" text-anchor="middle">Labels</text>
+  <text x="870" y="207" fill="#991b1b" font-size="8" text-anchor="middle">80 classes</text>
+
+  <rect x="778" y="222" width="120" height="30" rx="3" fill="#f87171" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="838" y="241" fill="white" font-size="10" font-weight="600" text-anchor="middle">Confidence Scores</text>
+
+  <!-- NMS-free note -->
+  <rect x="780" y="258" width="116" height="14" rx="3" fill="#fbbf24"/>
+  <text x="838" y="269" fill="#451a03" font-size="9" font-weight="700" text-anchor="middle">★ NMS-free inference</text>
+
+  <!-- ===== LOSS ===== -->
+  <rect x="780" y="320" width="110" height="60" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="835" y="343" fill="#475569" font-size="10" font-weight="700" text-anchor="middle">Training Loss</text>
+  <text x="835" y="358" fill="#64748b" font-size="9" text-anchor="middle">L = L_cls + λ₁L_box</text>
+  <text x="835" y="370" fill="#64748b" font-size="9" text-anchor="middle">+ λ₂L_giou</text>
+  <line x1="835" y1="280" x2="835" y2="318" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- ===== ARROWHEAD DEF ===== -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- ===== CAPTION ===== -->
+  <rect x="0" y="390" width="1100" height="30" fill="#003087" rx="0"/>
+  <text x="550" y="410" fill="white" font-size="12" text-anchor="middle">
+    Figure 2. Overview of EfficientDet-T. Sparse token sampling reduces FLOPs by 40% while Adaptive Query Selection improves small-object recall.
+  </text>
+</svg>
