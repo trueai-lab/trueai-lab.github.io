@@ -697,6 +697,10 @@ section:nth-child(even):not(.hero) { background: var(--bg-section); }
 }
 .person-head[aria-expanded="true"] .person-caret { transform: rotate(180deg); }
 
+/* A person with no bio and no links has nothing to reveal, so their card is
+   rendered as a plain div instead of a button: no caret, no pointer. */
+.person-head--static { cursor: default; }
+
 .person-bio {
   padding: 0 1.3rem 1.2rem;
   border-top: 1px solid var(--border);
