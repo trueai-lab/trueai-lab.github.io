@@ -638,6 +638,82 @@ section:nth-child(even):not(.hero) { background: var(--bg-section); }
 }
 .member-link:hover { background: var(--accent-light); color: var(--accent); border-color: var(--accent); text-decoration: none; }
 
+/* ===== PERSON ROW (click to reveal bio) =====
+   Each person shows only name / title / affiliation until the header is
+   activated; the bio panel below is toggled by js/main.js. The header is a
+   <button> so it works with keyboard and screen readers, which is also why
+   the person's links live in the panel and never inside the header. */
+.person {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 0.9rem;
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+.person:hover { box-shadow: var(--shadow-hover); }
+
+.person-head {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  width: 100%;
+  padding: 1.1rem 1.3rem;
+  background: none;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.person-photo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  overflow: hidden;
+}
+.person-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.person-id { flex: 1; min-width: 0; }
+.person-name { display: block; font-size: 1.1rem; font-weight: 700; color: var(--primary); line-height: 1.35; }
+.person-title { display: block; font-size: 0.9rem; color: var(--text); }
+.person-affil { display: block; font-size: 0.84rem; color: var(--text-secondary); line-height: 1.45; }
+
+/* Marks a name or detail still waiting on real data. */
+.person-todo { color: #b03000; font-style: italic; font-weight: 600; }
+
+.person-caret {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+  transition: transform var(--transition);
+}
+.person-head[aria-expanded="true"] .person-caret { transform: rotate(180deg); }
+
+.person-bio {
+  padding: 0 1.3rem 1.2rem;
+  border-top: 1px solid var(--border);
+  margin: 0 1.3rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+.person-bio p { font-size: 0.92rem; margin: 0.9rem 0 0; }
+.person-bio .person-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.9rem; }
+
+@media (max-width: 640px) {
+  .person-head { gap: 0.8rem; padding: 0.9rem 1rem; }
+  .person-photo { width: 48px; height: 48px; font-size: 1.4rem; }
+  .person-name { font-size: 1rem; }
+  .person-bio { margin: 0 1rem; }
+}
+
 .alumni-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 .alumni-table th, .alumni-table td { padding: 0.7rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
 .alumni-table th { background: var(--bg-section); font-weight: 700; color: var(--primary); font-size: 0.83rem; text-transform: uppercase; letter-spacing: 0.5px; }

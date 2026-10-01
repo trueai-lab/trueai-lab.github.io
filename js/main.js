@@ -34,6 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // People page: reveal a person's bio when their header is activated.
+  document.querySelectorAll('.person-head').forEach(head => {
+    head.addEventListener('click', () => {
+      const bio = document.getElementById(head.getAttribute('aria-controls'));
+      if (!bio) return;
+      const isOpen = head.getAttribute('aria-expanded') === 'true';
+      head.setAttribute('aria-expanded', String(!isOpen));
+      bio.hidden = isOpen;
+    });
+  });
+
   // BibTeX toggle
   document.querySelectorAll('.bibtex-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
